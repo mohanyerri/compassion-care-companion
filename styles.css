@@ -1012,8 +1012,61 @@ a:hover {
 }
 
 .scope-list ul {
-  margin: 0;
+  margin: 1rem 0 0;
   padding-left: 1.2rem;
+}
+
+.two-col:has(.scope-list) {
+  align-items: start;
+}
+
+.scope-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.scope-summary::-webkit-details-marker {
+  display: none;
+}
+
+.scope-summary h3 {
+  margin: 0;
+}
+
+.scope-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.scope-toggle::before {
+  content: "Expand";
+}
+
+.scope-toggle::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-right: 2.5px solid currentColor;
+  border-bottom: 2.5px solid currentColor;
+  transform: rotate(45deg) translateY(-3px);
+  transition: transform 0.2s ease;
+}
+
+.scope-list[open] .scope-toggle::before {
+  content: "Collapse";
+}
+
+.scope-list[open] .scope-toggle::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
 }
 
 .scope-list li + li {
