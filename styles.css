@@ -267,7 +267,6 @@ a:hover {
   background: var(--color-surface);
   text-align: left;
   padding: 3rem 0 3.5rem;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .hero-grid {
@@ -376,31 +375,32 @@ a:hover {
   justify-content: center;
   min-height: 220px;
   padding: 2rem 1.5rem;
-  border-radius: 8px;
-  background: var(--color-primary-dark);
   text-align: center;
 }
 
+.hero-visual img {
+  width: 200px;
+  height: auto;
+}
+
 .hero-visual-word {
-  margin: 0.75rem 0 1.25rem;
-  font-size: 2rem;
+  margin: 1rem 0 1rem;
+  font-size: 3.25rem;
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1;
-  color: #fff;
+  color: var(--color-text);
 }
 
 .hero-visual-word span {
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .hero-visual-tag {
   margin: 0;
-  padding: 8px 14px;
-  background: var(--color-primary);
-  color: #fff;
+  color: var(--color-text-muted);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 @media (min-width: 900px) {
@@ -1454,6 +1454,11 @@ summary:focus-visible,
 
   .card-grid-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 360px));
+    justify-content: center;
   }
 
   .two-col,
