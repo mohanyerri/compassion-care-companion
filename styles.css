@@ -365,42 +365,162 @@ a:hover {
 .hero-note {
   margin: 1.25rem 0 0;
   color: var(--color-text-muted);
-  font-size: 14px;
+  font-size: 13px;
 }
 
-.hero-visual {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 220px;
-  padding: 2rem 1.5rem;
+/* Lead card (index2): one-way contact request, WhatsApp call or email */
+.lead-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(24, 33, 46, 0.12);
+}
+
+.lead-card h2 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
   text-align: center;
 }
 
-.hero-visual img {
-  width: 200px;
-  height: auto;
-}
-
-.hero-visual-word {
-  margin: 1rem 0 1rem;
-  font-size: 3.25rem;
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 1;
-  color: var(--color-text);
-}
-
-.hero-visual-word span {
-  color: var(--color-primary);
-}
-
-.hero-visual-tag {
-  margin: 0;
+.lead-sub {
+  margin: 0 0 1.25rem;
+  font-size: 15px;
+  text-align: center;
   color: var(--color-text-muted);
+}
+
+.lead-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 1.25rem;
+  padding: 4px;
+  background: var(--color-primary-tint);
+  border-radius: 999px;
+}
+
+.lead-tab {
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-primary);
+  font: inherit;
+  font-size: 15px;
   font-weight: 600;
-  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.lead-tab.is-active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.lead-form[hidden] {
+  display: none;
+}
+
+.lead-form .field {
+  margin: 0 0 1rem;
+}
+
+.lead-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.lead-form .req {
+  color: var(--color-alert);
+}
+
+.lead-form input[type="text"],
+.lead-form input[type="tel"],
+.lead-form input[type="email"],
+.lead-form textarea {
+  width: 100%;
+  padding: 0 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px;
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.lead-form input[type="text"],
+.lead-form input[type="tel"],
+.lead-form input[type="email"] {
+  height: 48px;
+}
+
+.lead-form textarea {
+  padding: 12px 14px;
+  resize: vertical;
+  min-height: 104px;
+}
+
+.lead-form input:focus-visible,
+.lead-form textarea:focus-visible {
+  outline: 3px solid var(--color-primary-pale);
+  border-color: var(--color-primary);
+}
+
+.lead-form .field-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 1.25rem;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.lead-form .field-consent input {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 1.5px 0 0;
+  accent-color: var(--color-primary);
+}
+
+.lead-form .field-consent span {
+  flex: 1;
+}
+
+.lead-form .btn {
+  width: 100%;
+}
+
+.lead-form .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.field-trap {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  overflow: hidden;
+}
+
+.form-status {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-status.is-ok {
+  color: var(--color-done);
+}
+
+.form-status.is-error {
+  color: var(--color-alert);
 }
 
 @media (min-width: 900px) {
@@ -411,10 +531,6 @@ a:hover {
   .hero-grid {
     grid-template-columns: 1.15fr 0.85fr;
     gap: 3rem;
-  }
-
-  .hero-visual {
-    min-height: 400px;
   }
 }
 
