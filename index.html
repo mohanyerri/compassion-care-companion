@@ -50,17 +50,58 @@
             <li><strong>Every concern addressed</strong><span>We make sure each worry is raised, and note anything left unanswered so you can follow up.</span></li>
             <li><strong>Right guidance, right courage</strong><span>A calm companion who answers your parents' doubts and keeps them reassured, so the visit goes smoothly.</span></li>
           </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/917019512970" target="_blank" rel="noopener">WhatsApp to Book</a>
-            <a class="btn btn-primary" href="mailto:withyouseniors@gmail.com">Send an Email</a>
+        </div>
+        <aside class="lead-card" id="register" aria-labelledby="leadTitle">
+          <h2 id="leadTitle">Talk to us</h2>
+          <p class="lead-sub">Choose one way to reach you. We usually reply within a few hours, across time zones.</p>
+
+          <div class="lead-tabs" role="tablist" aria-label="How should we reach you?">
+            <button type="button" role="tab" id="tabWhatsapp" class="lead-tab is-active" aria-selected="true" aria-controls="formWhatsapp">WhatsApp call</button>
+            <button type="button" role="tab" id="tabEmail" class="lead-tab" aria-selected="false" aria-controls="formEmail" tabindex="-1">Email</button>
           </div>
-          <p class="hero-note">We are a companion and advocacy service, not doctors. We never give medical advice.</p>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <img src="assets/logo.svg" alt="" width="200" height="120">
-          <p class="hero-visual-word">with<span>you</span>seniors</p>
-          <p class="hero-visual-tag">We are with them, on your behalf.</p>
-        </div>
+
+          <form class="lead-form" id="formWhatsapp" role="tabpanel" aria-labelledby="tabWhatsapp" data-method="whatsapp_call" novalidate>
+            <div class="field">
+              <label for="waName">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input id="waName" name="name" type="text" autocomplete="name" maxlength="100" required>
+            </div>
+            <div class="field">
+              <label for="waNumber">WhatsApp number (with country code) <span class="req" aria-hidden="true">*</span></label>
+              <input id="waNumber" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 555 010 1234" required>
+            </div>
+            <div class="field-trap" aria-hidden="true">
+              <label for="waWebsite">Leave this field empty</label>
+              <input id="waWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <label class="field-consent">
+              <input name="consent" type="checkbox" required>
+              <span>I agree that Withyouseniors may store these details and contact me on WhatsApp about my request. See the <a href="privacy.html">Privacy Policy</a>.</span>
+            </label>
+            <button class="btn btn-primary" type="submit" disabled>Request a WhatsApp call</button>
+          </form>
+
+          <form class="lead-form" id="formEmail" role="tabpanel" aria-labelledby="tabEmail" data-method="email" hidden novalidate>
+            <div class="field">
+              <label for="emEmail">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="emEmail" name="email" type="email" autocomplete="email" maxlength="254" required>
+            </div>
+            <div class="field">
+              <label for="emMessage">How can we help? <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="emMessage" name="message" rows="4" maxlength="1000" placeholder="Tell us about your parent's upcoming visit" required></textarea>
+            </div>
+            <div class="field-trap" aria-hidden="true">
+              <label for="emWebsite">Leave this field empty</label>
+              <input id="emWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <label class="field-consent">
+              <input name="consent" type="checkbox" required>
+              <span>I agree that Withyouseniors may store these details and contact me by email about my request. See the <a href="privacy.html">Privacy Policy</a>.</span>
+            </label>
+            <button class="btn btn-primary" type="submit" disabled>Send message</button>
+          </form>
+
+          <p class="form-status" id="leadStatus" role="status" aria-live="polite"></p>
+        </aside>
       </div>
     </section>
 
@@ -572,5 +613,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="registration.js?v=2"></script>
 </body>
 </html>
