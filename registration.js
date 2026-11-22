@@ -112,9 +112,11 @@
     if (recentlySent()) return show(messages.wait, 'error');
 
     const button = form.querySelector('button[type="submit"]');
-    const label = button.textContent;
+    const labelEl = button.querySelector('.btn-label') || button;
+    const label = labelEl.textContent;
     button.disabled = true;
-    button.textContent = 'Sending...';
+    labelEl.textContent = 'Sending...';
+    button.classList.add('is-loading');
     show('', '');
 
     const headers = {
@@ -138,7 +140,8 @@
       console.error('registration failed:', err);
       show(messages.failed, 'error');
     } finally {
-      button.textContent = label;
+      labelEl.textContent = label;
+      button.classList.remove('is-loading');
       syncConsent(form);
     }
   }

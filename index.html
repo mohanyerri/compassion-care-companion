@@ -62,8 +62,8 @@
           <p class="lead-sub">Choose one way to reach you. We usually reply within a few hours, across time zones.</p>
 
           <div class="lead-tabs" role="tablist" aria-label="How should we reach you?">
-            <button type="button" role="tab" id="tabWhatsapp" class="lead-tab is-active" aria-selected="true" aria-controls="formWhatsapp">WhatsApp call</button>
-            <button type="button" role="tab" id="tabEmail" class="lead-tab" aria-selected="false" aria-controls="formEmail" tabindex="-1">Email</button>
+            <button type="button" role="tab" id="tabWhatsapp" class="lead-tab is-active" aria-selected="true" aria-controls="formWhatsapp"><svg class="lead-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>WhatsApp call</span></button>
+            <button type="button" role="tab" id="tabEmail" class="lead-tab" aria-selected="false" aria-controls="formEmail" tabindex="-1"><svg class="lead-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>Email</span></button>
           </div>
 
           <form class="lead-form" id="formWhatsapp" role="tabpanel" aria-labelledby="tabWhatsapp" data-method="whatsapp_call" novalidate>
@@ -83,7 +83,7 @@
               <input name="consent" type="checkbox" required>
               <span>I agree that Withyouseniors may store these details and contact me on WhatsApp about my request. See the <a href="privacy.html">Privacy Policy</a>.</span>
             </label>
-            <button class="btn btn-primary" type="submit" disabled>Request a WhatsApp call</button>
+            <button class="btn btn-primary btn-submit" type="submit" disabled><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="btn-label">Request a WhatsApp call</span><svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           </form>
 
           <form class="lead-form" id="formEmail" role="tabpanel" aria-labelledby="tabEmail" data-method="email" hidden novalidate>
@@ -103,11 +103,48 @@
               <input name="consent" type="checkbox" required>
               <span>I agree that Withyouseniors may store these details and contact me by email about my request. See the <a href="privacy.html">Privacy Policy</a>.</span>
             </label>
-            <button class="btn btn-primary" type="submit" disabled>Send message</button>
+            <button class="btn btn-primary btn-submit" type="submit" disabled><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span class="btn-label">Send message</span><svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           </form>
 
           <p class="form-status" id="leadStatus" role="status" aria-live="polite"></p>
         </aside>
+      </div>
+    </section>
+
+    <!-- What we do / don't do -->
+    <section id="scope" class="section scope">
+      <div class="container">
+        <h2>What we do, and what we don't</h2>
+        <p class="section-intro">We are your parent's companion and advocate, not their doctor. Being clear about this keeps everyone safe.</p>
+        <div class="two-col">
+          <details class="scope-list scope-do">
+            <summary class="scope-summary"><h3>✓ We do</h3><span class="scope-toggle" aria-hidden="true"></span></summary>
+            <ul>
+              <li>Accompany your parent through the entire visit</li>
+              <li>Ask your questions and take detailed notes</li>
+              <li>Translate and explain medical terms simply</li>
+              <li>Document what the doctor said, medicines and next steps</li>
+              <li>Meet your parent at the hospital and stay until the visit is over</li>
+              <li>Keep you connected with live updates, and be available for a call or WhatsApp</li>
+              <li>Protect your parent's health data. It is shared only with the family members you name. See our <a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </details>
+          <details class="scope-list scope-dont">
+            <summary class="scope-summary"><h3>✗ We don't</h3><span class="scope-toggle" aria-hidden="true"></span></summary>
+            <ul>
+              <li>Diagnose or give medical advice</li>
+              <li>Change, skip or suggest medicine doses</li>
+              <li>Make treatment decisions on your family's behalf</li>
+              <li>Handle your parent's cash, ATM cards or documents unsupervised</li>
+              <li>Pay hospital bills. You pay the hospital directly.</li>
+              <li>Provide home pickup and drop</li>
+              <li>Nursing care</li>
+            </ul>
+          </details>
+        </div>
+        <p class="scope-note">
+          Second opinions are given by <strong>licensed partner doctors</strong>, never by withyouseniors staff.
+        </p>
       </div>
     </section>
 
@@ -116,14 +153,14 @@
       <div class="container">
         <div class="two-col">
           <div class="audience-card">
-            <div class="card-icon" aria-hidden="true">✈️</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
             <h3>For families away</h3>
             <p>Join the consultation without flying home, where the doctor permits. Get updates as if
               you heard every answer first-hand, and never again piece together
               half-remembered updates.</p>
           </div>
           <div class="audience-card">
-            <div class="card-icon" aria-hidden="true">🧓</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
             <h3>For seniors in India</h3>
             <p>No more facing big multi-speciality hospitals alone. A patient, respectful companion
               stays with you from the hospital entrance to the pharmacy, and answers every doubt along the way.</p>
@@ -139,23 +176,23 @@
         <p class="section-intro">Four simple steps, from your first WhatsApp message to the follow-up appointment.</p>
         <ol class="steps">
           <li class="step">
-            <span class="step-num" aria-hidden="true">1</span>
+            <div class="card-icon step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg><span class="step-badge">1</span></div>
             <h3>Book</h3>
             <p>Message us on WhatsApp or email with the hospital, doctor and preferred date.</p>
           </li>
           <li class="step">
-            <span class="step-num" aria-hidden="true">2</span>
+            <div class="card-icon step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg><span class="step-badge">2</span></div>
             <h3>Prepare</h3>
             <p>A pre-visit call with you and your parent. We go over their history, current medicines
               and your top 3 worries, and write a question list for the doctor.</p>
           </li>
           <li class="step">
-            <span class="step-num" aria-hidden="true">3</span>
+            <div class="card-icon step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M2 22h20"/><path d="M12 6v6"/><path d="M9 9h6"/><path d="M10 22v-4h4v4"/></svg><span class="step-badge">3</span></div>
             <h3>Visit</h3>
             <p>We accompany your parent through the hospital visit, helping them understand what the doctor says while keeping you informed every step of the way.</p>
           </li>
           <li class="step">
-            <span class="step-num" aria-hidden="true">4</span>
+            <div class="card-icon step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg><span class="step-badge">4</span></div>
             <h3>Follow up</h3>
             <p>You get a written summary, the next steps and red flags to watch, and we help
               book the follow-up appointment.</p>
@@ -171,42 +208,42 @@
         <p class="section-intro">The things that most often go wrong when a parent visits the hospital alone.</p>
         <div class="card-grid card-grid-4">
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🤝</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></div>
             <h3>Start to finish</h3>
             <p>We stay with your parent from the moment they reach the hospital until the visit is over.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">❓</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
             <h3>The right questions</h3>
             <p>We ask your prepared questions, so no concern goes unasked.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">✅</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
             <h3>Concerns addressed</h3>
             <p>We make sure every worry on your list is raised, and note anything left unanswered so you can follow up.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">📝</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></div>
             <h3>Clear documentation</h3>
             <p>What the doctor said, medicines, next steps and red flags, all in writing.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🗣️</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></div>
             <h3>Language &amp; jargon</h3>
             <p>We translate Hindi, Telugu and English, and explain medical terms in simple words.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">💊</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></div>
             <h3>Medicine check</h3>
             <p>We record prescriptions exactly as written and point out any difference from the current list, for the doctor or pharmacist to confirm.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🩺</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></div>
             <h3>Second opinion</h3>
             <p>An optional review by a licensed partner doctor, if needed.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">❤️</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
             <h3>Courage &amp; reassurance</h3>
             <p>A calm, warm presence, so your parent feels supported and not alone.</p>
           </div>
@@ -224,7 +261,7 @@
         <!-- Part 1: During the visit -->
         <details class="receive-part">
           <summary class="receive-summary">
-              <h3 class="receive-heading"><span class="receive-num" aria-hidden="true">1</span> During the visit</h3>
+              <h3 class="receive-heading"><span class="receive-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/><path d="M9 7h6"/><path d="M9 11h4"/></svg></span> During the visit</h3>
               <span class="receive-intro">Each step arrives on WhatsApp as it happens, with photos, documents and notes attached, so you follow along from wherever you are.</span>
             <span class="receive-toggle" aria-hidden="true"></span>
           </summary>
@@ -309,7 +346,7 @@
         <!-- Part 2: After the visit -->
         <details class="receive-part">
           <summary class="receive-summary">
-              <h3 class="receive-heading"><span class="receive-num" aria-hidden="true">2</span> After the visit</h3>
+              <h3 class="receive-heading"><span class="receive-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span> After the visit</h3>
               <span class="receive-intro">A plain-English summary on WhatsApp and email, usually the same day.</span>
             <span class="receive-toggle" aria-hidden="true"></span>
           </summary>
@@ -365,42 +402,6 @@
       </div>
     </section>
 
-    <!-- What we do / don't do -->
-    <section id="scope" class="section scope">
-      <div class="container">
-        <h2>What we do, and what we don't</h2>
-        <p class="section-intro">We are your parent's companion and advocate, not their doctor. Being clear about this keeps everyone safe.</p>
-        <div class="two-col">
-          <details class="scope-list scope-do">
-            <summary class="scope-summary"><h3>✓ We do</h3><span class="scope-toggle" aria-hidden="true"></span></summary>
-            <ul>
-              <li>Accompany your parent through the entire visit</li>
-              <li>Ask your questions and take detailed notes</li>
-              <li>Translate and explain medical terms simply</li>
-              <li>Document what the doctor said, medicines and next steps</li>
-              <li>Meet your parent at the hospital and stay until the visit is over</li>
-              <li>Keep you connected with live updates, and be available for a call or WhatsApp</li>
-            </ul>
-          </details>
-          <details class="scope-list scope-dont">
-            <summary class="scope-summary"><h3>✗ We don't</h3><span class="scope-toggle" aria-hidden="true"></span></summary>
-            <ul>
-              <li>Diagnose or give medical advice</li>
-              <li>Change, skip or suggest medicine doses</li>
-              <li>Make treatment decisions on your family's behalf</li>
-              <li>Handle your parent's cash, ATM cards or documents unsupervised</li>
-              <li>Pay hospital bills. You pay the hospital directly.</li>
-              <li>Provide home pickup and drop</li>
-              <li>Nursing care</li>
-            </ul>
-          </details>
-        </div>
-        <p class="scope-note">
-          Second opinions are given by <strong>licensed partner doctors</strong>, never by withyouseniors staff.
-        </p>
-      </div>
-    </section>
-
     <!-- Trust & Safety -->
     <!-- REVIEW BEFORE LAUNCH: keep only the claims below that are true today. Remove or mark "coming soon" for anything not yet in place. -->
     <section id="trust" class="section trust">
@@ -409,47 +410,47 @@
         <p class="section-intro">Your parent will be with someone new. Here's how we make sure that person is someone you can trust.</p>
         <div class="card-grid">
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🛡️</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <h3>Background-checked</h3>
             <p>Every companion's identity, address and references are verified before their first visit.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🎓</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M22 10v6"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
             <h3>Educated &amp; trained</h3>
             <p>Companions are graduates, trained in respectful conversation with elders and in our emergency protocol.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🪪</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16a3 3 0 0 1 6 0"/><path d="M14 10h5"/><path d="M14 14h5"/></svg></div>
             <h3>Photo &amp; ID in advance</h3>
             <p>You and your parent receive the companion's photo and ID before the visit.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🔐</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><path d="M12 15v2"/></svg></div>
             <h3>Visit verification code</h3>
             <p>You share a private code with your parent. The companion must say it when they first meet at the hospital, every time.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">📍</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <h3>Live updates</h3>
             <p>You hear from the companion on WhatsApp throughout the visit, so you always know where your parent is and what is happening.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🔁</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></div>
             <h3>Consistent companion</h3>
             <p>Where possible, the same companion every visit, with a backup ready so no visit is missed.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">🚨</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
             <h3>Emergency protocol</h3>
             <p>If something goes wrong, the companion alerts hospital staff or emergency services right away, then calls your nominated decision-maker. We never authorize admission or treatment ourselves.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">📋</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
             <h3>Written consent</h3>
             <p>We collect written consent from your parent and authorization from your family before the first visit. We follow only the decision-maker you nominate.</p>
           </div>
           <div class="card">
-            <div class="card-icon" aria-hidden="true">💼</div>
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></div>
             <h3>Money &amp; documents stay safe</h3>
             <p>Companions never handle your parent's cash or ATM cards, and never hold documents unsupervised. You pay the hospital directly.</p>
           </div>
@@ -549,7 +550,7 @@
           pharmacy bills are paid by your family directly to the provider. Free cancellation or
           rescheduling up to 24 hours before the visit.
         </p>
-        <a class="btn btn-primary" href="#contact">Ask for a quote</a>
+        <a class="btn btn-primary btn-submit" href="#contact"><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="btn-label">Ask for a quote</span></a>
       </div>
     </section>
 

@@ -211,41 +211,44 @@ a:hover {
   transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
+/* Buttons share the icon theme: Harbor Blue tint fill, blue label, blue outline */
 .btn-primary {
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
-.btn-primary:hover {
-  background: var(--color-primary-hover);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(43, 90, 155, 0.28);
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-pale);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 12px rgba(43, 90, 155, 0.18);
 }
 
-.btn-primary:active {
-  background: var(--color-primary-dark);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+.btn-primary:active:not(:disabled) {
+  background: var(--color-primary-pale);
+  color: var(--color-primary-dark);
+  box-shadow: inset 0 2px 4px rgba(43, 90, 155, 0.2);
   transform: translateY(1px);
 }
 
 .btn-secondary {
   background: var(--color-surface);
-  color: var(--color-secondary);
-  border: 1.5px solid var(--color-secondary);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
-.btn-secondary:hover {
-  background: var(--color-secondary-tint);
-  color: var(--color-secondary-dark);
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-primary-tint);
+  color: var(--color-primary-dark);
 }
 
 /* Reversed buttons on the Harbor Blue hero */
-.hero .btn-primary {
+.hero .btn-primary:not(.btn-submit) {
   background: #fff;
   color: var(--color-primary);
 }
 
-.hero .btn-primary:hover {
+.hero .btn-primary:not(.btn-submit):hover:not(:disabled) {
   background: var(--color-primary-tint);
   color: var(--color-primary-dark);
   box-shadow: 0 4px 12px rgba(24, 33, 46, 0.25);
@@ -332,7 +335,7 @@ a:hover {
   justify-content: flex-start;
 }
 
-.hero.hero-split .btn {
+.hero.hero-split .btn:not(.btn-submit) {
   height: 48px;
   min-width: 0;
   padding: 0 28px;
@@ -340,26 +343,27 @@ a:hover {
   font-size: 16px;
 }
 
-.hero.hero-split .btn-primary {
-  background: var(--color-primary);
-  color: #fff;
+.hero.hero-split .btn-primary:not(.btn-submit) {
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
-.hero.hero-split .btn-primary:hover {
-  background: var(--color-primary-hover);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(43, 90, 155, 0.28);
+.hero.hero-split .btn-primary:not(.btn-submit):hover:not(:disabled) {
+  background: var(--color-primary-pale);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 12px rgba(43, 90, 155, 0.18);
 }
 
 .hero.hero-split .btn-secondary {
-  background: transparent;
-  color: var(--color-text);
-  border: 1.5px solid var(--color-text);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .hero.hero-split .btn-secondary:hover {
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-primary-tint);
+  color: var(--color-primary-dark);
 }
 
 .hero-note {
@@ -393,28 +397,52 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   padding: 4px;
-  background: var(--color-primary-tint);
-  border-radius: 999px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
 }
 
+/* Segmented control: quiet inactive option, raised white active option */
 .lead-tab {
-  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
   border: 0;
-  border-radius: 999px;
+  border-radius: 9px;
   background: transparent;
-  color: var(--color-primary);
+  color: var(--color-text-muted);
   font: inherit;
   font-size: 15px;
   font-weight: 600;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lead-tab-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.lead-tab:hover:not(.is-active) {
+  color: var(--color-text);
+  background: rgba(24, 33, 46, 0.04);
 }
 
 .lead-tab.is-active {
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: 0 1px 2px rgba(24, 33, 46, 0.08), 0 2px 8px rgba(24, 33, 46, 0.08), inset 0 0 0 1px var(--color-border);
+}
+
+.lead-tab:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .lead-form[hidden] {
@@ -499,6 +527,99 @@ a:hover {
   cursor: not-allowed;
 }
 
+/* Solid Harbor Blue CTA with icon, label and arrow (form submits, Ask for a quote) */
+.btn-submit {
+  gap: 10px;
+  height: 52px;
+  border: 1px solid var(--color-primary-hover);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #3366AD 0%, var(--color-primary) 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 2px rgba(24, 33, 46, 0.12), 0 4px 12px rgba(43, 90, 155, 0.22);
+  cursor: pointer;
+}
+
+.btn-submit .btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn-submit .btn-arrow {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-left: 2px;
+  transition: transform 0.2s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 2px 4px rgba(24, 33, 46, 0.12), 0 8px 20px rgba(43, 90, 155, 0.28);
+}
+
+.btn-submit:hover:not(:disabled) .btn-arrow {
+  transform: translateX(3px);
+}
+
+.btn-submit:active:not(:disabled) {
+  background: var(--color-primary-dark);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+/* Form submits and Ask for a quote match the active segmented tab: white fill, blue label, hairline border, soft lift */
+.lead-form .btn-submit,
+a.btn-submit {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 2px rgba(24, 33, 46, 0.08), 0 2px 8px rgba(24, 33, 46, 0.08);
+}
+
+.lead-form .btn-submit:hover:not(:disabled),
+a.btn-submit:hover:not(:disabled) {
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-pale);
+  box-shadow: 0 2px 4px rgba(24, 33, 46, 0.08), 0 6px 16px rgba(24, 33, 46, 0.1);
+}
+
+.lead-form .btn-submit:active:not(:disabled),
+a.btn-submit:active:not(:disabled) {
+  background: var(--color-bg);
+  box-shadow: 0 1px 2px rgba(24, 33, 46, 0.08);
+}
+
+.lead-form .btn-submit {
+  margin-top: 0.25rem;
+}
+
+/* Disabled until the form is valid: neutral, clearly inactive, not a faded blue */
+.lead-form .btn-submit:disabled {
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+  box-shadow: none;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.lead-form .btn-submit.is-loading {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border-color: var(--color-border);
+  cursor: progress;
+}
+
+.lead-form .btn-submit.is-loading .btn-arrow {
+  display: none;
+}
+
 .field-trap {
   position: absolute;
   left: -9999px;
@@ -581,7 +702,12 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.card-icon svg {
+  width: 26px;
+  height: 26px;
 }
 
 /* Check list */
@@ -679,6 +805,27 @@ a:hover {
   text-align: center;
 }
 
+.step-icon {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.step-badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
 .step-num {
   display: inline-flex;
   align-items: center;
@@ -686,8 +833,9 @@ a:hover {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--color-primary);
-  color: #fff;
+  background: #fff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
@@ -798,9 +946,27 @@ a:hover {
 .receive-heading {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.receive-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.receive-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .receive-num {
@@ -810,8 +976,9 @@ a:hover {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--color-primary);
-  color: #fff;
+  background: #fff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   font-size: 1.05rem;
   flex-shrink: 0;
 }
@@ -1289,6 +1456,11 @@ a:hover {
 
 .two-col:has(.scope-list) {
   align-items: start;
+}
+
+/* When both lists are expanded, match their heights */
+.two-col:has(.scope-do[open]):has(.scope-dont[open]) {
+  align-items: stretch;
 }
 
 .scope-summary {

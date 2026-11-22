@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Status Pamphlet · How it works</title>
+<!-- How to edit: see the note at the top of index.html. Text is in the HTML below. -->
+<link rel="stylesheet" href="editor.css">
+<style>
+  .poster { background: var(--paper); display: flex; flex-direction: column; }
+  .top { background: var(--blue-dark); color: #fff; padding: 80px 80px 70px; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand .mark { width: 96px; height: 57px; }
+  .brand-word { font-size: 44px; font-weight: 700; letter-spacing: -0.035em; line-height: 1; }
+  .brand-word .you { color: var(--apricot); }
+  .kicker { margin: 60px 0 0; font-size: 34px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--apricot); }
+  .title { margin: 16px 0 0; font-size: 92px; line-height: 1.04; font-weight: 800; letter-spacing: -0.035em; }
+  .lede { margin: 26px 0 0; font-size: 36px; line-height: 1.38; color: var(--blue-tint); }
+
+  .steps { list-style: none; margin: 0; padding: 70px 80px 0; position: relative; }
+  .steps::before {
+    content: ""; position: absolute; left: 136px; top: 110px; bottom: 60px;
+    width: 6px; border-radius: 3px; background: var(--blue-tint);
+  }
+  .steps li { display: flex; gap: 40px; position: relative; padding-bottom: 50px; }
+  .num {
+    flex: none; width: 118px; height: 118px; border-radius: 50%;
+    background: var(--blue); color: #fff; font-size: 56px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 10px var(--paper);
+  }
+  .step-text { padding-top: 10px; }
+  .step-text h3 { margin: 0; font-size: 50px; font-weight: 800; letter-spacing: -0.02em; }
+  .step-text p { margin: 10px 0 0; font-size: 34px; line-height: 1.36; color: var(--muted); }
+
+  .cta {
+    margin: auto 0 0; background: var(--apricot-tint); border-top: 3px solid var(--apricot);
+    padding: 50px 80px 64px; display: flex; align-items: center; gap: 40px;
+  }
+  .cta-text { flex: 1; min-width: 0; }
+  .cta-label { margin: 0; font-size: 34px; font-weight: 600; color: var(--muted); }
+  .cta-url { margin: 10px 0 0; font-size: 56px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--blue-dark); word-break: break-word; }
+  .cta-wa { margin: 16px 0 0; font-size: 32px; color: var(--ink); }
+  .cta .qr { flex: none; width: 230px; height: 230px; border-radius: 22px; border: 2px solid var(--line); }
+</style>
+</head>
+<body data-key="wys-pamphlet-steps" data-caption="How we go with your parents to their hospital visits in India, in 4 steps. 👉 ">
+
+<div class="poster" id="poster">
+  <section class="top">
+    <div class="brand">
+      <div class="mark" data-logo="light"></div>
+      <span class="brand-word">with<span class="you">you</span>seniors</span>
+    </div>
+    <p class="kicker" data-edit="kicker">How it works</p>
+    <h1 class="title" data-edit="title">Be at every hospital visit, even from abroad.</h1>
+    <p class="lede" data-edit="lede">Hospital visit companions for parents in India.</p>
+  </section>
+
+  <ol class="steps">
+    <li><span class="num">1</span><div class="step-text"><h3 data-edit="s1t">Book</h3><p data-edit="s1">WhatsApp us the hospital, doctor and date.</p></div></li>
+    <li><span class="num">2</span><div class="step-text"><h3 data-edit="s2t">Prepare</h3><p data-edit="s2">A call with you and your parent. We write the questions for the doctor.</p></div></li>
+    <li><span class="num">3</span><div class="step-text"><h3 data-edit="s3t">Visit</h3><p data-edit="s3">We stay with your parent throughout, with live updates to you.</p></div></li>
+    <li><span class="num">4</span><div class="step-text"><h3 data-edit="s4t">Follow up</h3><p data-edit="s4">A written summary: medicines, next steps, red flags.</p></div></li>
+  </ol>
+
+  <div class="cta">
+    <div class="cta-text">
+      <p class="cta-label" data-edit="ctaLabel">Start with step 1</p>
+      <p class="cta-url js-url">withyouseniors.in</p>
+      <p class="cta-wa" data-edit="ctaWa">WhatsApp +91 70195 12970</p>
+    </div>
+    <div class="qr" data-size="196" aria-label="QR code to the website"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Status Pamphlet · Question</title>
+<!-- How to edit: see the note at the top of index.html. Text is in the HTML below. -->
+<link rel="stylesheet" href="editor.css">
+<style>
+  .poster { background: var(--cloud); padding: 90px 80px 0; display: flex; flex-direction: column; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand .mark { width: 96px; height: 57px; }
+  .brand-word { font-size: 44px; font-weight: 700; letter-spacing: -0.035em; line-height: 1; }
+  .brand-word .you { color: var(--blue); }
+
+  .question { margin: 90px 0 0; font-size: 100px; line-height: 1.04; font-weight: 800; letter-spacing: -0.035em; }
+  .question .hl { color: var(--blue); }
+  .bar { width: 160px; height: 14px; border-radius: 7px; background: var(--apricot); margin: 44px 0 0; }
+
+  .answer {
+    margin: 56px 0 0; background: var(--blue-dark); color: #fff; border-radius: 36px; padding: 52px 56px;
+  }
+  .answer h2 { margin: 0; font-size: 92px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; color: var(--apricot); }
+  .answer p { margin: 22px 0 0; font-size: 38px; line-height: 1.38; color: var(--blue-tint); }
+
+  .compare { margin: 44px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .col { border-radius: 28px; padding: 36px 34px; }
+  .col h3 { margin: 0 0 22px; font-size: 32px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+  .col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+  .col li { font-size: 33px; line-height: 1.25; font-weight: 600; display: flex; gap: 14px; }
+  .col li::before { flex: none; font-weight: 800; }
+  .alone { background: #fff; border: 2px solid var(--line); color: var(--muted); }
+  .alone h3 { color: var(--muted); }
+  .alone li::before { content: "✕"; color: #B42318; }
+  .with { background: var(--sage-tint); border: 2px solid #CFE0D6; }
+  .with h3 { color: var(--sage-dark); }
+  .with li::before { content: "✓"; color: var(--sage); }
+
+  .cta {
+    margin: auto -80px 0; padding: 50px 80px 64px; background: var(--blue); color: #fff;
+    display: flex; align-items: center; gap: 40px; border-radius: 36px 36px 0 0;
+  }
+  .cta-text { flex: 1; min-width: 0; }
+  .cta-label { margin: 0; font-size: 34px; font-weight: 600; color: var(--blue-pale); }
+  .cta-url { margin: 10px 0 0; font-size: 56px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; word-break: break-word; }
+  .cta-wa { margin: 16px 0 0; font-size: 32px; color: var(--blue-tint); }
+  .cta .qr { flex: none; width: 230px; height: 230px; border-radius: 22px; }
+</style>
+</head>
+<body data-key="wys-pamphlet-question">
+
+<div class="poster" id="poster">
+  <div class="brand">
+    <div class="mark" data-logo="brand"></div>
+    <span class="brand-word">with<span class="you">you</span>seniors</span>
+  </div>
+
+  <h1 class="question" data-edit="question">Who's going with your parent to their next <span class="hl">hospital visit?</span></h1>
+  <div class="bar"></div>
+
+  <div class="answer">
+    <h2 data-edit="answer">We are.</h2>
+    <p data-edit="answerSub">A trained, background-checked companion stays with them from the entrance to the pharmacy.</p>
+  </div>
+
+  <div class="compare">
+    <div class="col alone">
+      <h3 data-edit="aloneTitle">Alone</h3>
+      <ul>
+        <li data-edit="a1">Questions forgotten</li>
+        <li data-edit="a2">Medical terms unclear</li>
+        <li data-edit="a3">News comes late</li>
+      </ul>
+    </div>
+    <div class="col with">
+      <h3 data-edit="withTitle">With us</h3>
+      <ul>
+        <li data-edit="w1">Every question asked</li>
+        <li data-edit="w2">Explained simply</li>
+        <li data-edit="w3">Live updates to you</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="cta-text">
+      <p class="cta-label" data-edit="ctaLabel">Book a visit or ask us anything</p>
+      <p class="cta-url js-url">withyouseniors.in</p>
+      <p class="cta-wa" data-edit="ctaWa">WhatsApp +91 70195 12970</p>
+    </div>
+    <div class="qr" data-size="196" aria-label="QR code to the website"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>

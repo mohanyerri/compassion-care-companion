@@ -1,0 +1,68 @@
+/* Shared styles for every pamphlet version: brand colours, toolbar, preview stage, edit mode. */
+:root {
+  --ink: #18212E;
+  --muted: #556170;
+  --blue: #2B5A9B;
+  --blue-dark: #1B3C6B;
+  --blue-pale: #C9DCF2;
+  --blue-tint: #E6EEF8;
+  --sage: #4E7363;
+  --sage-dark: #3A5A4B;
+  --sage-tint: #EAF1ED;
+  --apricot: #F0A868;
+  --apricot-tint: #FDF1E6;
+  --cloud: #F4F6F9;
+  --paper: #FFFFFF;
+  --line: #DCE3EA;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #2a3340; font-family: var(--font); color: var(--ink); min-height: 100vh; }
+
+/* Toolbar */
+.toolbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center;
+  padding: 10px 16px; background: #1f2731; color: #fff; font-size: 14px;
+}
+.toolbar button, .toolbar select {
+  font: inherit; font-weight: 600; padding: 8px 14px; border-radius: 8px;
+  border: 1px solid #44505f; background: #2f3a48; color: #fff; cursor: pointer;
+}
+.toolbar button:hover, .toolbar select:hover { background: #3a4757; }
+.toolbar button.primary { background: var(--blue); border-color: var(--blue); }
+.toolbar button.primary:hover { background: #224A82; }
+.toolbar button[aria-pressed="true"] { background: var(--apricot); color: var(--ink); border-color: var(--apricot); }
+.toolbar label { display: flex; align-items: center; gap: 6px; }
+.toolbar input {
+  font: inherit; padding: 7px 10px; border-radius: 8px; border: 1px solid #44505f;
+  background: #fff; color: var(--ink); width: 240px; max-width: 60vw;
+}
+.hint { width: 100%; text-align: center; color: #b8c2cf; font-size: 13px; margin: 0; }
+.hint[hidden] { display: none; }
+
+/* Stage: scales the 1080x1920 poster to fit the screen */
+.stage { display: flex; justify-content: center; padding: 20px 16px 40px; }
+.scaler { width: 1080px; height: 1920px; transform-origin: top left; }
+.frame { overflow: hidden; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+
+/* Poster base (1080 x 1920, WhatsApp Status size) */
+.poster {
+  width: 1080px; height: 1920px; position: relative; overflow: hidden;
+  font-family: var(--font); color: var(--ink); background: var(--cloud);
+}
+.poster svg { display: block; }
+.qr { background: #fff; display: flex; align-items: center; justify-content: center; }
+.qr img, .qr canvas { display: block; }
+
+/* Edit mode */
+.editing [data-edit] { outline: 3px dashed rgba(240,168,104,.9); outline-offset: 6px; cursor: text; border-radius: 6px; }
+.editing [data-edit]:focus { outline-style: solid; }
+
+.toast {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: #fff; color: var(--ink); padding: 10px 16px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  opacity: 0; transition: opacity .2s; pointer-events: none;
+}
+.toast.show { opacity: 1; }
