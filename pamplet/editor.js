@@ -14,7 +14,9 @@
     { file: 'question.html', name: '2 · Question' },
     { file: 'steps.html',    name: '3 · How it works' },
     { file: 'bold.html',     name: '4 · Bold' },
-    { file: 'updates.html',  name: '5 · Live updates' }
+    { file: 'updates.html',  name: '5 · Live updates' },
+    { file: 'complete.html', name: '6 · Full story' },
+    { file: 'complete-illustrated.html', name: '7 · Full story + illustration' }
   ];
   var DEFAULT_URL = 'https://www.withyouseniors.in';
   var URL_KEY = 'wys-pamphlet-url';                       // link is shared by all versions
